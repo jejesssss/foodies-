@@ -3,24 +3,281 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tips Memilih Bahan Makanan</title>
+  <title>Pasar Pintar: Panduan Memilih Bahan Makanan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Tips Memilih Bahan Makanan Segar</h1>
+
+  <!-- NAVIGASI -->
+  <nav class="nav">
+    <a href="#beranda" class="logo">Pasar Pintar</a>
+    <div class="nav-links">
+      <a href="#beranda">Beranda</a>
+      <a href="#bahan">Bahan</a>
+      <a href="#tentang">Tentang</a>
+    </div>
+  </nav>
+
+  <!-- BERANDA -->
+  <header class="hero" id="beranda">
+    <div class="hero-text">
+      <h1>Belanja bahan segar tanpa tebak-tebakan</h1>
+      <p>Cara memilih, tanda bahan sudah tidak layak, dan ide masakan dari tiap bahan. Seperti buku resep, tapi bisa dibuka di HP saat kamu di pasar.</p>
+      <a href="#bahan" class="tombol">Mulai pilih bahan</a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <span>🥕</span><span>🍅</span><span>🐟</span><span>🥬</span><span>🥚</span><span>🍗</span>
+    </div>
   </header>
 
-  <main>
-    <section class="kartu">
-      <img src="images/wortel.jpg" alt="Wortel segar">
-      <h2>Wortel</h2>
-      <ul>
-        <li>Kulit halus dan tidak berkerut</li>
-        <li>Warna oranye yang cerah</li>
-        <li>Berat untuk ukuran yang sesuai</li>
-      </ul>
-    </section>
+  <!-- DAFTAR BAHAN -->
+  <main id="bahan">
+    <h2 class="judul-seksi">Pilih bahan</h2>
+
+    <div class="filter" role="group" aria-label="Filter kategori">
+      <button class="aktif" data-kategori="semua">Semua</button>
+      <button data-kategori="sayur">Sayur</button>
+      <button data-kategori="ikan">Ikan</button>
+      <button data-kategori="daging">Daging & telur</button>
+    </div>
+
+    <!-- ========== WORTEL ========== -->
+    <!-- Untuk pakai foto sendiri: ganti <span class="ilustrasi">🥕</span>
+         dengan <img class="foto" src="images/wortel.jpg" alt="Wortel segar"> -->
+    <article class="bahan" data-kategori="sayur" id="wortel">
+      <div class="bahan-kepala">
+        <span class="ilustrasi" style="--warna:#fde3c4">🥕</span>
+        <div>
+          <h3>Wortel</h3>
+          <p>Tahan lama di kulkas, cocok untuk hampir semua masakan.</p>
+        </div>
+      </div>
+      <div class="bahan-isi">
+        <section class="kolom pilih">
+          <h4>Cara memilih</h4>
+          <ul>
+            <li>Keras dan padat saat dipegang</li>
+            <li>Kulit halus, warna oranye pekat merata</li>
+            <li>Ukuran sedang, yang terlalu besar kadang berserat keras</li>
+            <li>Terasa berat untuk ukurannya</li>
+          </ul>
+        </section>
+        <section class="kolom rusak">
+          <h4>Sudah tidak layak kalau</h4>
+          <ul>
+            <li>Lembek atau bisa dilenturkan</li>
+            <li>Berlendir atau berbau asam</li>
+            <li>Ada jamur putih atau bercak hitam yang melebar</li>
+          </ul>
+        </section>
+        <section class="kolom masak">
+          <h4>Bisa dimasak jadi</h4>
+          <div class="chips"><span>Sup wortel</span><span>Capcay</span><span>Tumis buncis wortel</span><span>Kue wortel</span><span>Jus wortel</span></div>
+        </section>
+      </div>
+      <p class="simpan"><strong>Cara simpan:</strong> buang daunnya, bungkus kertas, taruh di laci sayur kulkas. Tahan sekitar 2-3 minggu.</p>
+    </article>
+
+    <!-- ========== BAYAM ========== -->
+    <article class="bahan" data-kategori="sayur" id="bayam">
+      <div class="bahan-kepala">
+        <span class="ilustrasi" style="--warna:#d5ecd0">🥬</span>
+        <div>
+          <h3>Bayam</h3>
+          <p>Cepat layu, sebaiknya dimasak di hari yang sama atau esoknya.</p>
+        </div>
+      </div>
+      <div class="bahan-isi">
+        <section class="kolom pilih">
+          <h4>Cara memilih</h4>
+          <ul>
+            <li>Daun hijau segar dan tegak, tidak terkulai</li>
+            <li>Batang kokoh, tidak lembek</li>
+            <li>Tidak ada bercak kuning atau lubang besar</li>
+          </ul>
+        </section>
+        <section class="kolom rusak">
+          <h4>Sudah tidak layak kalau</h4>
+          <ul>
+            <li>Daun menguning dan lembek</li>
+            <li>Berlendir atau bau busuk</li>
+            <li>Ada bagian yang menghitam</li>
+          </ul>
+        </section>
+        <section class="kolom masak">
+          <h4>Bisa dimasak jadi</h4>
+          <div class="chips"><span>Sayur bening</span><span>Tumis bayam</span><span>Perkedel bayam</span><span>Omelet bayam</span></div>
+        </section>
+      </div>
+      <p class="simpan"><strong>Cara simpan:</strong> jangan dicuci dulu, bungkus tisu kering dalam wadah tertutup di kulkas. Tahan 2-4 hari.</p>
+    </article>
+
+    <!-- ========== TOMAT ========== -->
+    <article class="bahan" data-kategori="sayur" id="tomat">
+      <div class="bahan-kepala">
+        <span class="ilustrasi" style="--warna:#fbd0cc">🍅</span>
+        <div>
+          <h3>Tomat</h3>
+          <p>Pilih sesuai kebutuhan: yang agak keras untuk ditumis, yang matang untuk sambal.</p>
+        </div>
+      </div>
+      <div class="bahan-isi">
+        <section class="kolom pilih">
+          <h4>Cara memilih</h4>
+          <ul>
+            <li>Warna merah merata, kulit mengkilap</li>
+            <li>Kencang tapi sedikit empuk saat ditekan pelan</li>
+            <li>Terasa berat dan agak harum di bagian tangkai</li>
+          </ul>
+        </section>
+        <section class="kolom rusak">
+          <h4>Sudah tidak layak kalau</h4>
+          <ul>
+            <li>Kulit keriput dan sangat lembek</li>
+            <li>Berair atau keluar cairan</li>
+            <li>Ada jamur atau bau fermentasi</li>
+          </ul>
+        </section>
+        <section class="kolom masak">
+          <h4>Bisa dimasak jadi</h4>
+          <div class="chips"><span>Sambal tomat</span><span>Sup tomat</span><span>Saus pasta</span><span>Telur masak tomat</span></div>
+        </section>
+      </div>
+      <p class="simpan"><strong>Cara simpan:</strong> tomat yang masih keras taruh di suhu ruang. Yang sudah matang, simpan di kulkas dan pakai dalam beberapa hari.</p>
+    </article>
+
+    <!-- ========== IKAN ========== -->
+    <article class="bahan" data-kategori="ikan" id="ikan">
+      <div class="bahan-kepala">
+        <span class="ilustrasi" style="--warna:#cfe6f5">🐟</span>
+        <div>
+          <h3>Ikan</h3>
+          <p>Paling cepat rusak. Periksa dengan teliti sebelum membeli.</p>
+        </div>
+      </div>
+      <div class="bahan-isi">
+        <section class="kolom pilih">
+          <h4>Cara memilih</h4>
+          <ul>
+            <li>Mata jernih dan menonjol</li>
+            <li>Insang merah cerah</li>
+            <li>Daging kenyal, bekas tekanan jari cepat kembali</li>
+            <li>Bau segar khas laut, tidak menyengat</li>
+            <li>Sisik utuh dan mengkilap</li>
+          </ul>
+        </section>
+        <section class="kolom rusak">
+          <h4>Sudah tidak layak kalau</h4>
+          <ul>
+            <li>Mata keruh dan cekung</li>
+            <li>Insang kecokelatan atau abu-abu</li>
+            <li>Daging lembek, bekas tekanan tidak kembali</li>
+            <li>Bau busuk menyengat atau berlendir kental</li>
+          </ul>
+        </section>
+        <section class="kolom masak">
+          <h4>Bisa dimasak jadi</h4>
+          <div class="chips"><span>Ikan bakar</span><span>Pepes ikan</span><span>Ikan asam manis</span><span>Sup ikan</span><span>Ikan goreng</span></div>
+        </section>
+      </div>
+      <p class="simpan"><strong>Cara simpan:</strong> bersihkan, simpan di bagian kulkas yang paling dingin dan masak dalam 1-2 hari. Untuk lebih lama, masukkan freezer.</p>
+    </article>
+
+    <!-- ========== AYAM ========== -->
+    <article class="bahan" data-kategori="daging" id="ayam">
+      <div class="bahan-kepala">
+        <span class="ilustrasi" style="--warna:#f9e0c9">🍗</span>
+        <div>
+          <h3>Ayam</h3>
+          <p>Harus dimasak sampai matang sempurna, dan pisahkan talenan dari bahan lain.</p>
+        </div>
+      </div>
+      <div class="bahan-isi">
+        <section class="kolom pilih">
+          <h4>Cara memilih</h4>
+          <ul>
+            <li>Warna merah muda pucat, merata</li>
+            <li>Daging kenyal dan tidak lengket</li>
+            <li>Bau netral, tidak asam</li>
+          </ul>
+        </section>
+        <section class="kolom rusak">
+          <h4>Sudah tidak layak kalau</h4>
+          <ul>
+            <li>Berlendir dan lengket</li>
+            <li>Bau asam atau busuk</li>
+            <li>Warna abu-abu atau kehijauan</li>
+          </ul>
+        </section>
+        <section class="kolom masak">
+          <h4>Bisa dimasak jadi</h4>
+          <div class="chips"><span>Opor ayam</span><span>Soto ayam</span><span>Ayam goreng</span><span>Ayam kecap</span></div>
+        </section>
+      </div>
+      <p class="simpan"><strong>Cara simpan:</strong> ayam mentah tahan 1-2 hari di kulkas. Kalau tidak langsung dimasak, bekukan di freezer.</p>
+    </article>
+
+    <!-- ========== TELUR ========== -->
+    <article class="bahan" data-kategori="daging" id="telur">
+      <div class="bahan-kepala">
+        <span class="ilustrasi" style="--warna:#fbeec2">🥚</span>
+        <div>
+          <h3>Telur</h3>
+          <p>Ada trik sederhana untuk mengecek kesegarannya di rumah.</p>
+        </div>
+      </div>
+      <div class="bahan-isi">
+        <section class="kolom pilih">
+          <h4>Cara memilih</h4>
+          <ul>
+            <li>Cangkang bersih dan tidak retak</li>
+            <li>Tes air: telur segar tenggelam dan berbaring</li>
+            <li>Saat dikocok pelan, tidak terdengar bunyi cairan</li>
+          </ul>
+        </section>
+        <section class="kolom rusak">
+          <h4>Sudah tidak layak kalau</h4>
+          <ul>
+            <li>Mengapung dan berdiri tegak di air (sudah tua, cek baunya)</li>
+            <li>Bau busuk saat dipecahkan</li>
+            <li>Ada bercak hijau atau hitam di dalam</li>
+          </ul>
+        </section>
+        <section class="kolom masak">
+          <h4>Bisa dimasak jadi</h4>
+          <div class="chips"><span>Telur dadar</span><span>Telur balado</span><span>Telur ceplok</span><span>Telur rebus</span></div>
+        </section>
+      </div>
+      <p class="simpan"><strong>Cara simpan:</strong> simpan di kulkas dengan ujung lancip menghadap bawah. Biasanya tahan 3-5 minggu.</p>
+    </article>
   </main>
+
+  <!-- TENTANG -->
+  <section class="tentang" id="tentang">
+    <h2 class="judul-seksi">Tentang situs ini</h2>
+    <p>Pasar Pintar dibuat untuk membantu siapa saja memilih bahan makanan yang segar dan aman. Informasi di sini bersifat panduan umum. Kalau ragu soal kondisi bahan, lebih baik tidak dikonsumsi.</p>
+  </section>
+
+  <footer>
+    <p>Dibuat dengan HTML, CSS, dan GitHub Pages</p>
+  </footer>
+
+  <script>
+    // Filter kategori
+    const tombol = document.querySelectorAll('.filter button');
+    const kartu = document.querySelectorAll('.bahan');
+    tombol.forEach(function (t) {
+      t.addEventListener('click', function () {
+        tombol.forEach(function (b) { b.classList.remove('aktif'); });
+        t.classList.add('aktif');
+        const pilih = t.dataset.kategori;
+        kartu.forEach(function (k) {
+          k.hidden = !(pilih === 'semua' || k.dataset.kategori === pilih);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
